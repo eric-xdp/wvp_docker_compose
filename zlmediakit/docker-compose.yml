@@ -1,0 +1,25 @@
+services:
+  zlm:
+    image: zlmediakit/zlmediakit:master
+    container_name: zlm
+    restart: always
+    volumes:
+      - ./config:/opt/media/conf
+    ports:
+      - 40000-40500:40000-40500
+      - 40000-40500:40000-40500/udp
+      - 45001:45001
+      - 45001:45001/udp
+      - 45002:45002
+      - 45002:45002/udp
+      - 45003:45003
+      - 45004:45004
+      - 45005:45005
+      - 45005:45005/udp
+      - 45006:45006
+      - 45006:45006/udp
+      - 45007:45007
+    logging:
+        driver: "json-file"
+        options:
+          max-size: "2g"
