@@ -42,4 +42,4 @@ services:
       # 配置文件挂载
       - ./web/static:/usr/share/nginx/html
       - ./web/nginx.conf:/etc/nginx/nginx.conf
-        # restart: always
+    restart: always
