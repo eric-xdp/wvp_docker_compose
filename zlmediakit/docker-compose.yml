@@ -19,6 +19,9 @@ services:
       - 45006:45006
       - 45006:45006/udp
       - 45007:45007
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
     logging:
         driver: "json-file"
         options:

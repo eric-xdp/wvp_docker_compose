@@ -22,7 +22,7 @@ services:
       - "45010:45010"
     environment:
       # 指定时区
-      - TZ="Asia/Shanghai"
+      - TZ=Asia/Shanghai
       # 启动容器后执行的命令
     entrypoint: java -jar wvp.jar --spring.config.location=wvp.yml
       # 指定IP地址
@@ -35,6 +35,9 @@ services:
     container_name: web_wvp
     ports:
       - "45011:80"
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
     networks:
       zlmediakit_default:
         ipv4_address: 172.20.0.4
